@@ -19,7 +19,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="template")
 
 # Инициализация TonConnect
-MANIFEST_URL = "https://ton-connect.github.io/demo-dapp-with-react-ui/tonconnect-manifest.json"
+MANIFEST_URL = "https://geraserv.github.io/tonconnect-manifest.json"
 connector = TonConnect(MANIFEST_URL)
 
 # Dependency для получения сессии базы данных
