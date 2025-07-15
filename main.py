@@ -19,7 +19,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="template")
 
 # Инициализация TonConnect
-MANIFEST_URL = "https://yourdomain.com/tonconnect-manifest.json"
+MANIFEST_URL = "https://ton-connect.github.io/demo-dapp-with-react-ui/tonconnect-manifest.json"
 connector = TonConnect(MANIFEST_URL)
 
 # Dependency для получения сессии базы данных
@@ -90,3 +90,4 @@ def extract_user_id_from_init_data(init_data: str) -> str:
     from urllib.parse import parse_qs
     params = parse_qs(init_data)
     return params.get('user', {}).get('id', str(uuid.uuid4()))
+
